@@ -157,12 +157,10 @@ export default function CadastroTeste({ navigation }) {
             value={dataNascimento}
             onChangeText={(dataNascimento) => setNascimento(dataNascimento)}
           />
-          <TextInput 
-            style={styles.mainContentFormInput}
-            placeholder='Foto'
-            placeholderTextColor='#000000'
-            keyboardType="default"
-          />
+          <TouchableOpacity style={styles.mainContentFormInputImage}>
+            <Text>Foto</Text>
+            <Image source={require('../../assets/img/icon_photo.png')} style={styles.mainHeaderImage} />
+          </TouchableOpacity>
           {/* <Image source={{ uri: user.image }} style={{ width: 200, height: 200 }} />
         <Button onPress={pickImage} >Pick an image</Button>
         <Button onPress={onSubmit} >Send</Button> */}
@@ -272,6 +270,20 @@ const styles = StyleSheet.create({
     fontFamily: 'ABeeZee_400Regular',
 
   },
+  mainContentFormInputImage: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#F3BC2C',
+    width: '70%',
+    // height: 60,
+    height: '8.5%',
+    marginTop: '8%',
+    borderRadius: 5,
+    paddingLeft: 20,
+    paddingRight: 20
+
+  }
 });
 
 /* import React, { useState, useEffect } from 'react';

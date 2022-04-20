@@ -96,17 +96,21 @@ export default class Carteira extends Component {
                         </View>
 
                         <TouchableOpacity style={styles.mainContentModalBottomPayment}>
-                            <Text>Forma de pagamento</Text>
-                            <Text>Novo cartão</Text>
+                            <Text style={styles.mainContentModalTitleText}>Forma de pagamento</Text>
+                            {/* <View styles={styles.mainContentModalBottomPaymentSpace}> */}
+                                <Image source={require('../../assets/img/icon_card.png')} style={styles.mainContentModalBottomPaymentImage} />
+                                <Text style={styles.mainContentModalTitleText}>Novo cartão</Text>
+                                <Image source={require('../../assets/img/icon_next.png')} style={styles.mainContentModalBottomPaymentBack} />
+                            {/* </View> */}
                         </TouchableOpacity>
 
-                        <TouchableOpacity  style={styles.mainContentModalBottomConfirmation}>
-                            <Text>Confirmar</Text>
+                        <TouchableOpacity style={styles.mainContentModalBottomConfirmation}>
+                            <Text style={styles.mainContentModalBottomConfirmationText}>Confirmar</Text>
                         </TouchableOpacity>
 
                     </View>
                 </View>
-            </View>
+            </View >
         );
     }
 }
@@ -147,7 +151,7 @@ const styles = StyleSheet.create({
     },
     mainContent: {
         width: '100%',
-        height: 370,
+        height: 416,
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -160,14 +164,16 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     mainContentCardTitle: {
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'ABeeZee_400Regular',
+
     },
     mainContentCardWallet: {
         fontSize: 40
     },
     mainContentModal: {
         width: '100%',
-        height: '50%',
+        height: 450,
     },
     mainContentModalTitle: {
         width: '100%',
@@ -177,9 +183,6 @@ const styles = StyleSheet.create({
         borderTopStartRadius: 5,
         alignItems: 'center',
         justifyContent: 'center'
-    },
-    mainContentModalTitleText: {
-        fontSize: 14,
     },
     mainContentModalBottom: {
         width: '100%',
@@ -205,15 +208,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between'
     },
-    mainContentModalBottomPayment: {
-        width: 373,
-        height: 50,
-        backgroundColor: '#F3BC2C',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row'
-    },
     mainContentModalBottomConfirmation: {
         width: 373,
         height: 50,
@@ -221,5 +215,36 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    mainContentModalBottomConfirmationText: {
+        fontSize: 20
+    },
+    mainContentModalBottomPaymentImage: {
+        width: 30,
+        height: 23.3
+    },
+    mainContentModalBottomPaymentNext: {
+        width: 20,
+        height: 20
+    },
+    mainContentModalBottomPayment: {
+        width: 373,
+        height: 50,
+        backgroundColor: '#F3BC2C',
+        borderRadius: 5,
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    mainContentModalTitleText: {
+        fontSize: 14,
+        fontFamily: 'ABeeZee_400Regular',
+    },
+    mainContentModalBottomPaymentSpace: {
+        width: 200,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column-reverse'
     }
 });
