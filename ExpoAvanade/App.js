@@ -17,6 +17,8 @@ import Pesquisa from './src/screens/pesquisa';
 import Perfil from './src/screens/perfil';
 import Pagamento from './src/screens/pagamento';
 import CadastroTeste from './src/screens/cadastroImg';
+import Cartao from './src/screens/cartao';
+
 
 const AuthStack = createStackNavigator();
 
@@ -85,6 +87,8 @@ export default function App() {
         <AuthStack.Screen name="Pesquisa" component={Pesquisa} />
         <AuthStack.Screen name="Perfil" component={Perfil} />
         <AuthStack.Screen name="CadastroTeste" component={CadastroTeste} />
+        <AuthStack.Screen name="Cartao" component={Cartao} />
+
       </AuthStack.Navigator>
     </NavigationContainer>
   );

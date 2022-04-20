@@ -95,7 +95,7 @@ export default class Carteira extends Component {
                             </TouchableOpacity>
                         </View>
 
-                        <TouchableOpacity style={styles.mainContentModalBottomPayment}>
+                        <TouchableOpacity style={styles.mainContentModalBottomPayment}  onPress={() => this.props.navigation.navigate('Cartao')}>
                             <Text style={styles.mainContentModalTitleText}>Forma de pagamento</Text>
                             {/* <View styles={styles.mainContentModalBottomPaymentSpace}> */}
                                 <Image source={require('../../assets/img/icon_card.png')} style={styles.mainContentModalBottomPaymentImage} />
